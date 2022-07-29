@@ -1,0 +1,446 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* CADA ETIQUETA DEL MENU LAS QUIERO CON COLOR BLANCO*/
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MIS ETIQUETAS DEL MENU LE SACO LOS ESTILOS QUE PUEDAN TENER*/
+ul {
+    list-style: none;
+}
+
+/* MI CONTENER DE TODA LA PAGINA WEB LA POSICIONO*/
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* LOGO ICONO MENU*/
+.nav-brand {
+    width: 75px;
+}
+
+/* NAVEGACIÓN */
+.nav-bar {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 20px 0;
+}
+
+/* NAVEGACIÓN IZQUIERDA */
+.nav-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+/* NAVEGACIÓN DERECHA LE DOY UN ESPACIO ENTRE CADA ETIQUETAS */
+.nav-bar ul li a {
+    padding: 15px;
+}
+
+/* NAVEGACIÓN DERECHA LE DOY UN ESTILO A CADA ETIQUETA */
+.nav-bar ul li a:hover {
+    border-bottom: 3px solid #6b4060;
+    color:   #6b4060;
+}
+
+/* BOTON RESPONSIVE */
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 36px;
+    display: none;
+}
+
+/* PORTADA: EDUCAMOS PARA EL TRABAJO TRANSFORMAMOS VIDAS */
+#home {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 150px;
+}
+
+/* BOTÓN CONTACTENOS DE LA PORTADA */
+.btn {
+    font-weight: bold;
+    padding: 8px 12px;
+    background: #de6712;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ffffff;
+}
+
+/* EFECTO PARA CUANDO PASAS EL MOUSE ENCIMA DEL BOTÓN CONTACTENOS DE LA PORTADA */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ----------------------------------------- EDUCANDO PARA EL TRABAJO ----------------------------------------- */
+
+#features,
+#contact,
+#social {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* SUBRAYO LOS H2 CON UNA IMÁGEN  */
+#features h2,
+#contact h2 {
+    padding-bottom: 30px;
+    text-align: center;
+    background: url('../img/h2.png') no-repeat center bottom;
+}
+
+#intro p {
+    text-align: center;
+}
+
+/* ----------------------------------------- ¿QUÉ ES PESCAR? ----------------------------------------- */
+
+/* CRÉO UNA FILA DE 3 COLUMNAS AUTO*/
+.features-card, .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;    
+    margin: 50px 0;
+}
+
+/* AJUSTO EL TAMAÑO DEL CONTENEDOR */
+.features-card div, .contact-details div  {
+    width: 30%;
+    min-width: 350px;
+    flex-grow: 0;
+}
+
+/* AJUSTO EL TAMAÑO DE LAS CARTAS */
+.features-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* CENTRO LOS PARRAFOS */
+.features-card p {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* CENTRO LOS TITUL0S */
+.features-card h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+/* -------------------------------------- FUNDACION PESCAR BOTÓN -------------------------------------- */
+
+/* CENTRO LA CAJA FUNDACION PESCAR */
+#button-pescar {
+    text-align: center;
+    margin: 120px;
+}
+
+/* CRÉO LOS BORDES DEL BOTÓN */
+.pescar-btn {
+    padding: 25px 40px;
+    color: #000000;
+    border: solid 1px #000000;
+    font-weight: bold;
+
+}
+
+/* EFECTO PARA CUANDO PASAS EL MOUSE ENCIMA DEL BOTÓN */
+.pescar-btn:hover {
+    color: #de6712;
+    border: solid 1px #de6712;
+}
+
+
+/* ------------------------------------------- CONTACTO ------------------------------------------------ */
+
+/* CENTRAMOS EL TITULO CONTACTO Y LOS PARRAFOS */
+.contact-details h3,
+.contact-details p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ------------------------------------ FOLLOW @FundaciónPescar ---------------------------------------- */
+
+/* CENTRAMOS EL TITULO FOLLOW @FundaciónPescar */
+#social h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* CENTRAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+/* SEPARAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links a {
+    margin: 0 25px;
+}
+
+/* AGRANDAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links a i {
+    font-size: 3rem;
+}
+
+/* EFECTO PARA CUANDO PASAS EL MOUSE ENCIMA DE LOS ICONOS FOLLOW @FundaciónPescar */
+.links a i:hover {
+    color: #de6712;
+}
+
+/* -------------------------- FOOTER Centro Pescar "Paths to the Future" ------------------------------ */
+
+#foot {
+    background-color: #de6712;
+    padding-block: 15px;
+    text-align: center;
+}
+
+
+/* -------------------------------------- MOVÍL RESPONSIVE 800px -------------------------------------- */
+@media (max-width: 800px) {
+    .menu-btn {
+        display: block;
+    }
+
+    /* LE DOY UN EFECTO A MI BOTÓN MENÚ */
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
+
+    /* MEJORO MI NAVEGACION EN EL MENÚ */
+    .nav-bar ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 100%;
+        border-right: #ffffff 1px solid;
+        opacity: 0.9;
+        padding: 25px;
+        transform: translateX(-400px);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* CORRIGO MI LETRA Y TAMAÑO DEL MENÚ */
+    .nav-bar ul.nav-menu li {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    /* QUE SE AMPLIE MI MENÚ CON LA ITERACCIÓN CON JS */
+    .nav-bar ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    /* SEPARO MI LUPA DEL ICONO MENÚ */
+    .nav-bar ul.nav-menu-right {    
+        margin-left: 36rem;
+    }   
+
+    .features-card, .contact-details {
+        gap: 45px;
+    }
+}
+
+/* ----------------- CARDS HOME --------------------------------------------------------------- */
+:root {
+    --surface-color: rgb(226, 137, 78);
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 150px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 150px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #ffffff;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #dfdfdf;
+    font-size: 0.9em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    
+  
+/* ----------------- SCROLL FOTOS --------------------------------------------------------------- */
+  #sliderG {
+    overflow: hidden; 
+    width: 100%;
+}
+    #sliderG figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      animation: 30s slider infinite; }
+      #sliderG figure img {
+        float: left;
+        width: 20%; }
+
+
+
+  @keyframes slider {
+    0% {
+      left: 0; }
+    20% {
+      left: 0; }
+    25% {
+      left: -100%; }
+    45% {
+      left: -100%; }
+    50% {
+      left: -200%; }
+    70% {
+      left: -200%; }
+    75% {
+      left: -300%; }
+    95% {
+      left: -300%; }
+    100% {
+      left: -400%; } }
+
+
+/* ----------------- SCROLL FOTOS --------------------------------------------------------------- */
+.experiencias{
+   display: flex;
+}
+
+.experiencia{
+    display: flex;
+    width: 50%;
+    padding: 2em;
+}
+.experiencia img{
+    width: 80px;
+    height: 80px;
+    margin-right: 1em;
+}
+
+/* ---------------- companias --------------------------------------------------------------- */
+#titulo-companias{
+    color: rgb(83, 83, 83);
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 0.3em;
+    margin-bottom: 1em;
+}
+.companias-asociadas{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.companias-asociadas img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
